@@ -310,6 +310,15 @@ behind # means there are github commits I don't have yet -> git pull
 ahead # means there are github commits that I have but the github doesn't have yet -> git push
 
 
+main is the default of branches, if in teams, never commit to main
+
+but i should try and make it a habit not to commit to main and make branches as well
+
+git branch # lists branches
+
+git checkout -b branchname #creates and switches to a new branch
+git checkout branchname # switches to an existing branch
+
 
 
 ```
