@@ -1,0 +1,17 @@
+
+1. File hashing Hash Lookup (through powershell and bash) Virtual Machine sandboxing using Kali Linux Debian distro Clam AV static scans 68-engine scan freshclam (Clam AV) + ClamAV malware Scan Powershell Scripting (what I did specifically is extract singular files from unextracted or unopened zip files for virus scanning) Bash scripting ( same thing but also taking hashes for hash addressing and scanning) Kali Linux (basically setting up shared files to move the"suspected infected zip" inside for malware lab analysis [ Things I did in powershell ] Get-FileHash "C:\Users(MY NAME)\Desktop\Random\nso.zip" -Algorithm SHA256 Get-FileHash "C:\Users(MY NAME)\Desktop\Random\nso\Windose.exe" -Algorithm SHA256 Get-FileHash "C:\Users(MY NAME)\Desktop\Random\UnityPlayer.dll" -Algorithm SHA256 Start-Process "[https://www.virustotal.com/gui/file/4C3DFA0AD97AC16BB8AF3343E41561B139FD740584CE40F84319CA80A4830A88](https://www.virustotal.com/gui/file/4C3DFA0AD97AC16BB8AF3343E41561B139FD740584CE40F84319CA80A4830A88 "https://www.virustotal.com/gui/file/4C3DFA0AD97AC16BB8AF3343E41561B139FD740584CE40F84319CA80A4830A88")" Expand-Archive -Path "C:\Users(MY NAME)\Desktop\Random\nso.zip" -DestinationPath "C:\Users(MY NAME)\Desktop\Random\nsoextracted" Add-Type -AssemblyName System.IO.Compression.FileSystem $zip = [System.IO.Compression.ZipFile]::OpenRead("C:\Users(MY NAME)\Desktop\Random\nso.zip") $zip.Entries | Where-Object { $.Name -eq "Windose.exe" } | ForEach-Object { [System.IO.Compression.ZipFileExtensions]::ExtractToFile($, "C:\Users(MY NAME)\Desktop\Random\Windose.exe", $true) } $zip.Dispose() Add-Type -AssemblyName System.IO.Compression.FileSystem $zip = [System.IO.Compression.ZipFile]::OpenRead("C:\Users(MY NAME)\Desktop\Random\nso.zip") $zip.Entries | Where-Object { $.Name -eq "UnityPlayer.dll" } | ForEach-Object { [System.IO.Compression.ZipFileExtensions]::ExtractToFile($_, "C:\Users(MY NAME)\Desktop\Random\UnityPlayer.dll", $true) } $zip.Dispose()
+    
+    [VirusTotal](https://www.virustotal.com/gui/file/4C3DFA0AD97AC16BB8AF3343E41561B139FD740584CE40F84319CA80A4830A88%22)
+    
+    VirusTotal
+    
+2. [ Things I did in Linux Bash ] sudo apt update sudo apt install clamav -y sudo apt install -y detect-it-easy sudo pkill freshclam sudo rm /var/log/clamav/freshclam.log sudo touch /var/log/clamav/freshclam.log sudo chmod 777 /var/log/clamav/freshclam.log sudo freshclam clamscan -r --bell -i ~/Desktop/analysis/ clamscan -r --bell -i /media/sf_nso_analysis/nso.zip cd /media/sf_nso_analysis ls /media/sf_nso_analysis/ unzip nso.zip "Windose.exe" -d ~/Desktop/analysis unzip nso.zip "UnityPlayer.dll" -d ~/Desktop/analysis
+    
+3. okay I'm gonna study more of these tomorrow
+    
+4. In summary (Used Powershell and Kali Linux VM through Bash) to setup a blue team process of checking files for malwares or viruses (imma review it more tomorrow) imma sleep
+
+
+ignore the trash markdown stuff, i jsut copied and paste form obsidinfsjdhfkfjsh
+
+
