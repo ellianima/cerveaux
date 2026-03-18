@@ -3,3 +3,6 @@ Inside this github repository I will be documenting and laying out all of the th
 
 
 Monorepo/Knowledge Base
+
+
+everything here is for learning
