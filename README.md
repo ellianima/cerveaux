@@ -6,3 +6,6 @@ Monorepo/Knowledge Base
 
 
 everything here is for learning
+
+
+(ignore any fancy/goofy names pwease >_< )
