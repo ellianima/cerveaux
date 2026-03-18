@@ -221,3 +221,95 @@ Other shells exist: Zsh, Fish, Sh — Bash is the standard.
 - `rm -rf` is permanent — think before running it
 - Tab autocomplete everything — saves time and prevents typos
 - Arrow up — cycle command history instead of retyping
+
+
+
+```
+Essay about everything I've learnt on this session! Don't mind if it's messy asf, I'm not trying to make it academic, but more so as training brain association. whoami prints the current username, pwd prints working directory, where I am right now, ls lists all the files in the directory, ls -la lists a long lists with hidden files with full details, cd <foldername> moves you to where you wanna go (directory) and cd .. moves you to parent directory and cd ~ moves you to home directory. hidden files starting with "." and wont show until you do ls -a (-a for all) (-l for longlist) 
+
+echo with just > = create files with content or text inside echo "text"
+echo with >> = appends text into an existing file as a new line
+cat file.txt = displays the file onto the screen
+mv oldname newname = move or renaming files
+
+mkdir foldername = makes new directory
+mkdir -p parentdirname/childdirname = creates nested directories in oneshot
+rm filename = deletes a file
+rm -rf foldername = deletes a folder AND EVERYTHING INSIDE IT
+
+rm = no undos!!!
+
+nano filename = opens the file in a text editor on CLI
+
+tab habit = autocompletes
+arrow keys ups and down = cycles
+
+Git is a VCS, version contorl system that takes snapshots of current project on an evolutionary standpoint where your work never gets lost, you can experiment and undo mistakes and see exactly what changed, alongside when and why the changes occured
+
+Three stages of git
+
+working directory > staging area > repository
+working directory is everything, this is where you edit it all, like the backstage of a show or something
+
+staging area is where you put them mfs on the stage! to be recorded by the movie photographer!!
+
+repository (local)
+git commit is where the photographer's recordings are locally stored but saved
+
+then once you push, it's basically that photographer's recordings being uploaded online to the remote microsoft repository github, I use mine as "cerveaux" meaning brian
+
+git config --global user.name "for all to see"
+git config --global user.email "for all to see"
+git config --local user.name" "for specific projects to see"
+git config --local user.email "for specific projects to see"
+
+git config --global init.defaultBranch main
+#it makes it so that the future repo starts with main instead of master, this one specifically is specific to my kali linux vm where I initialized first a different repo but i linked it to there, this is a one time thing
+
+git config --global pull.rebase false
+#this setting basically made it so that when I pulled, it always merged
+
+git init # lets git track your folder
+git status # a habit i need to do, it constatly checks state
+git add filename # puts to staging 
+git add . # stages ALL!!
+git commit -m "blabla" # click click, snapshot into local repo!
+git log --oneline #checks the commit history
+git log #checks the commit history IN FUL EFFECTS!!
+
+# btw commit message should be serious 
+
+GITHUB is a cloud hosting service for Git repositories, 
+
+Git is the tool
+Github is the cloud and collab platform, a remote one, from microsoft
+
+SSH = secure shell
+it is how machine-to-machine communications occur in a secure protocol way
+
+Private key = never share to anyone, my machine, mine!
+Public key = gave it to github, i could share it!!! >:D 
+
+private key solves challenge, public key verifies it, identity proven, no passwords needed
+
+TO CONNECT LOCAL REPO TO GITHUB!!!
+
+first, be on your main local repo folder
+
+git remote add origin git@github.com:usernameingithub/reponame.git
+git remove -v #verifies connection if I can fetch or push
+git push -u origin main # pushes, which sets up stream
+git push #after that push above, you can just use git push 
+
+-u #means upstream (it means future pushes only needs "git push"
+
+git pull origin main #downloads + merges remote changes
+git push origin --delete branchname # deletes old branches, if u don't want it or need it anymore
+
+behind # means there are github commits I don't have yet -> git pull
+ahead # means there are github commits that I have but the github doesn't have yet -> git push
+
+
+
+
+```
