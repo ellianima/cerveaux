@@ -10,3 +10,8 @@
 3. okay I'm gonna study more of these tomorrow
     
 4. In summary (Used Powershell and Kali Linux VM through Bash) to setup a blue team process of checking files for malwares or viruses (imma review it more tomorrow) imma sleep
+
+
+ignore the trash markdown stuff, i jsut copied and paste form obsidinfsjdhfkfjsh
+
+
