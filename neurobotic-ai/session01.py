@@ -1,5 +1,7 @@
 import numpy as np
 
-a = np.arange(1_000_000)
-result = a * 2
-print(result[:5])
+arr = np.array([1, 2, 3, 4, 5])
+
+print(arr)
+
+print(type(arr))
