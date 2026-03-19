@@ -1,7 +1,7 @@
 # cerveaux
-Inside this github repository I will be documenting and laying out all of the things that I learn!
+## Inside this github repository I will be documenting and laying out all of the things that I learn!
 
-
+```
 Monorepo/Knowledge Base
 
 
@@ -9,3 +9,4 @@ everything here is for learning
 
 
 (ignore any fancy/goofy names pwease >_< )
+```
