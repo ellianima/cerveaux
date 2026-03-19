@@ -176,28 +176,92 @@ outer tensor layer has 2 matrices and each matrix has 2 vectors and each vector 
 is my explanation to it
 """
 
-
-print(np.zeros((2, 3)))
-#the code above made a 2-D array with 2 rows and 3 columns filled with zeros, as floats?!
-
-print(np.ones((2, 3)))
-#the code above made a 2-D array with 2 rows and 3 columns filled with ones, as floats?!
-
-print(np.full((2, 3), 7))
-#the code above made a 2-D array with 2 rows and 3 columns filled with the number 7, as integers?!
-
-print(np.arange(0, 10, 2))
-#the code above made a 1-D array from start inclusive 0 to stop exccluse 10 with a step of 2.
-#what does arange mean? it stands for array range, it creates an array of evenly spaced values within a given interval, defined by the start, stop, and step parameters.
-
-print(np.linspace(0, 1, 5))
-#first it created a 1 dimensional array in float type.. now what I got from it is that it made it so that from 0 to 1, it made it into 5 evenly spaced values
-
-
-print(np.linspace(0, 10, 3))
-print(np.arange(0, 10, 3))
-
+#
+#print(np.zeros((2, 3)))
+##the code above made a 2-D array with 2 rows and 3 columns filled with zeros, as floats?!
+#
+#print(np.ones((2, 3)))
+##the code above made a 2-D array with 2 rows and 3 columns filled with ones, as floats?!
+#
+#print(np.full((2, 3), 7))
+##the code above made a 2-D array with 2 rows and 3 columns filled with the number 7, as integers?!
+#
+#print(np.arange(0, 10, 2))
+##the code above made a 1-D array from start inclusive 0 to stop exccluse 10 with a step of 2.
+##what does arange mean? it stands for array range, it creates an array of evenly spaced values within a given interval, defined by the start, stop, and step parameters.
+#
+#print(np.linspace(0, 1, 5))
+##first it created a 1 dimensional array in float type.. now what I got from it is that it made it so that from 0 to 1, it made it into 5 evenly spaced values
+#
+#
+#print(np.linspace(0, 10, 3))
+#print(np.arange(0, 10, 3))
+#
 """
 linspace and arange are both functions in NumPy that generate arrays of evenly spaced values, but they do so in different ways:
+arange does start stop step where 0 is inclusive, 10 is excluse, 3 is the step between values, so it's evenly distributed, and returns an integer
+linspace is start stop num where 0 is inclusive and 10 is also inclusive, num is how many evenly distributed points you want made between start and stop value and returns a float
+"""
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+#
+#print(a + b)
+#print(a * b)
+#print(a ** 2)
+#print(b ** 2)
+#print(a / b)
+#print(b / a)
+#print(a - b)
+#print(b - a)
+#print(a > 2)
+#print(b > 2)
+#print(a > b)
+#print(b > a)
+#
+print(a[a > 2])
+
+#like an if  condition if true filters out and outputs whatever was true ye
 
 """
+it is boolean indexing in ML used constantly
+"""
+
+a = np.array([10, 5, 8, 2, 9, 1, 7])
+print(a[a > 6])
+
+
+scores = np.array([0.9, 0.4, 0.8, 0.2, 0.6, 0.1, 0.75])
+print(scores[scores > 0.5])
+print((scores > 0.5).sum())
+
+
+scores = np.array([0.9, 0.4, 0.8, 0.2, 0.6, 0.1, 0.75])
+scores_above_threshold = scores[scores > 0.5]
+num_of_passers = (scores > 0.5).sum()
+
+print(f"Scores above threshold: {scores_above_threshold}")
+print(f"Number of passers: {num_of_passers}")
+
+scores_in_percent = (scores * 100)
+print(f"Scores in percentage form: {scores_in_percent}")
+
+
+a = np.array([79, 80, 81, 80, 80])
+b = np.array([60, 95, 70, 90, 85])
+
+print(a.std())
+print(b.std())
+
+scores = np.array([88, 92, 45, 76, 95, 60, 83, 71, 99, 55])
+
+average_score = scores.mean()
+print(f"Average score: {average_score}")
+
+numpassers_higher_average = (scores > average_score).sum()
+print(f"Number of passers higher than the average score: {numpassers_higher_average}")
+
+std_of_class = scores.std()
+print(f"Standard deviation of the class: {std_of_class:.2f}")
+
+
