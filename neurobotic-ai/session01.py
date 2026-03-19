@@ -63,3 +63,24 @@ print(arr.size) #total num of elements
 print(arr.shape) #describes length, a 0-D array has no shape (rows, columns, etc) so it returns an empty tuple
 
 
+print(arr.dtype) 
+#data type of the array, in this case it's int64 (integer) because 42 is an integer
+#int64 is a data type that can store integers up to 64 bits in size, which is a very large range of nubmers
+
+
+temp = np.array(42.0)
+print(temp.dtype)
+#data type of the array, in this case it's float64 (floating point number) because 42.0 is a floating point number
+
+
+print(np.array(25.9, dtype=int))
+#converting a floating point number to an integer using the dtype parameter, it will truncate the decimal part and return 25
+
+precise_temp = np.round(25.9)
+final_temp = precise_temp.astype(int)
+print(final_temp)
+
+
+initial_price = np.round(105.99)
+final_price = initial_price.astype(int)
+print(final_price)
