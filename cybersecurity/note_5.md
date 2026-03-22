@@ -27,9 +27,9 @@ The **OSI Model (Open Systems Interconnection)** is a 7-layer framework that sta
 As data travels **down** the layers on the sender's side, each layer **wraps** the data with its own header — like envelopes inside envelopes. This is **encapsulation**.
 
 As data travels **up** the layers on the receiver's side, each layer **unwraps** its envelope. This is **decapsulation**.
+<img width="3999" height="2074" alt="image" src="https://github.com/user-attachments/assets/c8b7d2af-7016-41ab-a459-211461f50f1c" />
 
 ```
-<img width="3999" height="2074" alt="image" src="https://github.com/user-attachments/assets/8e109c75-93d0-47b1-a2fb-7aefd5a31080" />
 
 Sender                          Receiver
 Layer 7 → [DATA]                [DATA]          ← Layer 7
