@@ -29,6 +29,8 @@ As data travels **down** the layers on the sender's side, each layer **wraps** t
 As data travels **up** the layers on the receiver's side, each layer **unwraps** its envelope. This is **decapsulation**.
 
 ```
+<img width="3999" height="2074" alt="image" src="https://github.com/user-attachments/assets/8e109c75-93d0-47b1-a2fb-7aefd5a31080" />
+
 Sender                          Receiver
 Layer 7 → [DATA]                [DATA]          ← Layer 7
 Layer 6 → [L6][DATA]            [DATA]          ← Layer 6
