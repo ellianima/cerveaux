@@ -476,13 +476,13 @@
 
 ### Objective 1.1 — OS Types & Purposes
 
-- [ ] Windows editions: Home / Pro / Enterprise/Education
-- [ ] Windows 11 minimum requirements (TPM 2.0, Secure Boot, 64-bit CPU, 4GB RAM, 64GB storage)
-- [ ] macOS: APFS, Finder, Activity Monitor, Disk Utility, FileVault, Time Machine, DMG files, Terminal (zsh)
-- [ ] Linux: open-source, case-sensitive, file-based; common distros
-- [ ] Linux file system hierarchy: /, /home, /etc, /var, /tmp, /usr, /bin, /sbin, /dev, /proc
-- [ ] 🆕 **Chrome OS** — Google's OS; Linux-based; runs web apps and Android apps; Chromebook is the hardware; very limited local storage; cloud-centric; popular in education
-- [ ] 🆕 **Various filesystem types**:
+- [x] Windows editions: Home / Pro / Enterprise/Education
+- [x] Windows 11 minimum requirements (TPM 2.0, Secure Boot, 64-bit CPU, 4GB RAM, 64GB storage)
+- [x] macOS: APFS, Finder, Activity Monitor, Disk Utility, FileVault, Time Machine, DMG files, Terminal (zsh)
+- [x] Linux: open-source, case-sensitive, file-based; common distros
+- [x] Linux file system hierarchy: /, /home, /etc, /var, /tmp, /usr, /bin, /sbin, /dev, /proc
+- [x] 🆕 **Chrome OS** — Google's OS; Linux-based; runs web apps and Android apps; Chromebook is the hardware; very limited local storage; cloud-centric; popular in education
+- [x] 🆕 **Various filesystem types**:
     - NTFS — Windows standard; ACL permissions, EFS encryption, journaling, large files
     - ReFS (Resilient File System) — Windows Server; self-healing; better for large storage arrays; no bootable (can't be C:)
     - FAT32 — max 4 GB file size, max 8 TB volume; used on USB drives for compatibility
@@ -490,24 +490,24 @@
     - ext4 — Linux standard; journaling; large file support; most common Linux filesystem
     - XFS — Linux high-performance; great for large files; used in RHEL/CentOS
     - APFS — Apple File System; default macOS/iOS; snapshots, encryption, space sharing
-- [ ] 🆕 **Vendor life cycle limitations**:
+- [x] 🆕 **Vendor life cycle limitations**:
     - EOL (End of Life) — vendor stops patches and support; security risk; upgrade or isolate
     - End of Mainstream Support — no new features, only security patches
     - Windows 10 EOL: October 2025; Windows 11 is current
 
 ### Objective 1.2 — OS Installation & Upgrades
 
-- [ ] Clean install vs upgrade
-- [ ] Windows Media Creation Tool; boot order in UEFI
-- [ ] Sysprep — generalizes image for deployment
-- [ ] 🆕 **Boot methods**:
+- [x] Clean install vs upgrade
+- [x] Windows Media Creation Tool; boot order in UEFI
+- [x] Sysprep — generalizes image for deployment
+- [x] 🆕 **Boot methods**:
     - USB — most common; requires bootable USB (Rufus, Ventoy, WMC Tool)
     - Network (PXE) — Preboot eXecution Environment; boots from network server; used for imaging many PCs
     - External/hot-swappable drive — eSATA or USB external drive
     - Internal partition — recovery partition on same drive; Windows RE lives here
     - Internet-based — Windows 10/11 can install directly from Microsoft servers (cloud reset)
     - Solid-state/flash — boot from NVMe/SSD external enclosure
-- [ ] 🆕 **Types of installations**:
+- [x] 🆕 **Types of installations**:
     - Clean install — wipes drive; fresh OS; recommended for major upgrades
     - Upgrade — keeps files, apps, settings; risk of carrying over issues
     - Repair install — repairs system files while keeping user data (Windows: run setup.exe from within OS)
@@ -515,59 +515,59 @@
     - Remote network installation — PXE boot pulls image from WDS/MDT server
     - Image deployment — Sysprep + WIM image + DISM/MDT; clone to multiple machines
     - Multiboot — multiple OSes on same machine; bootloader menu; must install Windows LAST (or repair BCD)
-- [ ] 🆕 **Partition methods**:
+- [x] 🆕 **Partition methods**:
     - MBR — legacy; max 2 TB; max 4 primary; required for legacy BIOS
     - GPT — modern; max 9.4 ZB; 128 partitions; required for UEFI Secure Boot; has protective MBR
-- [ ] 🆕 **Drive format considerations** — during install, format as NTFS; decide partition scheme before starting
+- [x] 🆕 **Drive format considerations** — during install, format as NTFS; decide partition scheme before starting
 
 ### Objective 1.3 — Microsoft Windows Features & Tools
 
-- [ ] Full Windows Administration Tools table (Task Manager, Resource Monitor, Event Viewer, Device Manager, Disk Management, Services, Task Scheduler, Group Policy Editor, Computer Management, System Config, System Info, Performance Monitor, Registry Editor, Local Security Policy)
-- [ ] 🆕 **Certificate Manager (certmgr.msc)** — manage digital certificates for the current user; personal, trusted roots, intermediate CAs; critical for troubleshooting SSL/TLS issues and smart card auth
-- [ ] 🆕 **Local Users and Groups (lusrmgr.msc)** — manage local user accounts and groups; available in Pro/Enterprise (not Home); create local accounts, set passwords, manage group membership
-- [ ] 🆕 **Disk Cleanup (cleanmgr)** — removes temp files, Recycle Bin, Windows Update cache; safe for routine maintenance; "Clean up system files" = more aggressive cleanup
-- [ ] 🆕 **Disk Defragment (dfrgui)** — defragments HDDs; SSDs should NOT be defragmented (trimmed instead); Windows auto-schedules for HDDs
-- [ ] 🆕 **Windows Settings vs Control Panel** — Settings (modern, tablet-friendly, Win 10/11); Control Panel (legacy, disappearing); some features only in one or the other; know both paths
+- [x] Full Windows Administration Tools table (Task Manager, Resource Monitor, Event Viewer, Device Manager, Disk Management, Services, Task Scheduler, Group Policy Editor, Computer Management, System Config, System Info, Performance Monitor, Registry Editor, Local Security Policy)
+- [x] 🆕 **Certificate Manager (certmgr.msc)** — manage digital certificates for the current user; personal, trusted roots, intermediate CAs; critical for troubleshooting SSL/TLS issues and smart card auth
+- [x] 🆕 **Local Users and Groups (lusrmgr.msc)** — manage local user accounts and groups; available in Pro/Enterprise (not Home); create local accounts, set passwords, manage group membership
+- [x] 🆕 **Disk Cleanup (cleanmgr)** — removes temp files, Recycle Bin, Windows Update cache; safe for routine maintenance; "Clean up system files" = more aggressive cleanup
+- [x] 🆕 **Disk Defragment (dfrgui)** — defragments HDDs; SSDs should NOT be defragmented (trimmed instead); Windows auto-schedules for HDDs
+- [x] 🆕 **Windows Settings vs Control Panel** — Settings (modern, tablet-friendly, Win 10/11); Control Panel (legacy, disappearing); some features only in one or the other; know both paths
 
 ### Objective 1.4 — Windows Command-Line Tools
 
-- [ ] cd, dir, mkdir, rmdir, copy, xcopy, robocopy, del, sfc, DISM, chkdsk, diskpart, shutdown, tasklist, taskkill, net user, net localgroup, gpupdate, gpresult, netsh
-- [ ] PowerShell equivalents
-- [ ] 🆕 **`format`** — formats a volume; `format C: /fs:NTFS /q` (quick format); used inside `diskpart` workflow
-- [ ] 🆕 **`bootrec`** — repairs Windows boot record; WinRE only:
+- [x] cd, dir, mkdir, rmdir, copy, xcopy, robocopy, del, sfc, DISM, chkdsk, diskpart, shutdown, tasklist, taskkill, net user, net localgroup, gpupdate, gpresult, netsh
+- [x] PowerShell equivalents
+- [x] 🆕 **`format`** — formats a volume; `format C: /fs:NTFS /q` (quick format); used inside `diskpart` workflow
+- [x] 🆕 **`bootrec`** — repairs Windows boot record; WinRE only:
     - `/fixmbr` — rewrites MBR
     - `/fixboot` — rewrites boot sector
     - `/rebuildbcd` — scans drives and rebuilds BCD store (most useful)
-- [ ] 🆕 **`bcdedit`** — Boot Configuration Data editor; modify boot menu entries; change boot timeout; `bcdedit /enum` shows all entries
-- [ ] 🆕 **`winver`** — shows Windows version in a GUI popup; quick way to check exact build number
-- [ ] 🆕 **`dxdiag`** — DirectX Diagnostic Tool; shows GPU, DirectX version, display driver; used for gaming support
-- [ ] 🆕 **`mmc`** — Microsoft Management Console; framework for snap-ins; custom consoles by adding specific snap-ins
+- [x] 🆕 **`bcdedit`** — Boot Configuration Data editor; modify boot menu entries; change boot timeout; `bcdedit /enum` shows all entries
+- [x] 🆕 **`winver`** — shows Windows version in a GUI popup; quick way to check exact build number
+- [x] 🆕 **`dxdiag`** — DirectX Diagnostic Tool; shows GPU, DirectX version, display driver; used for gaming support
+- [x] 🆕 **`mmc`** — Microsoft Management Console; framework for snap-ins; custom consoles by adding specific snap-ins
 
 ### Objective 1.5 — Configure Windows Settings
 
-- [ ] 🆕 **Display settings** — resolution, refresh rate, scale (125%, 150%); multiple monitors (extend/mirror/second screen only); HDR toggle
-- [ ] 🆕 **Power settings** — Sleep, Hibernate, Fast Startup; Balanced vs High Performance vs Power Saver; wake timers; `powercfg /batteryreport`; `powercfg /sleepstudy`
-- [ ] 🆕 **Network settings** — adapter settings; static IP config; metered connection toggle (prevents background downloads)
-- [ ] 🆕 **User account settings** — change account type (Standard/Admin); password settings; picture/PIN; sign-in options (Hello PIN, fingerprint, password)
-- [ ] 🆕 **App settings** — default apps; startup apps (Settings > Apps > Startup); optional features (add RSAT tools, Hyper-V)
-- [ ] 🆕 **Accessibility settings** — Magnifier, Narrator, High Contrast, Sticky Keys, Filter Keys; important for ADA compliance in enterprise
+- [x] 🆕 **Display settings** — resolution, refresh rate, scale (125%, 150%); multiple monitors (extend/mirror/second screen only); HDR toggle
+- [x] 🆕 **Power settings** — Sleep, Hibernate, Fast Startup; Balanced vs High Performance vs Power Saver; wake timers; `powercfg /batteryreport`; `powercfg /sleepstudy`
+- [x] 🆕 **Network settings** — adapter settings; static IP config; metered connection toggle (prevents background downloads)
+- [x] 🆕 **User account settings** — change account type (Standard/Admin); password settings; picture/PIN; sign-in options (Hello PIN, fingerprint, password)
+- [x] 🆕 **App settings** — default apps; startup apps (Settings > Apps > Startup); optional features (add RSAT tools, Hyper-V)
+- [x] 🆕 **Accessibility settings** — Magnifier, Narrator, High Contrast, Sticky Keys, Filter Keys; important for ADA compliance in enterprise
 
 ### Objective 1.6 — Linux Client/Desktop OS
 
-- [ ] File management: ls, pwd, mv, cp, rm, chmod, chown, grep, find
-- [ ] sudo; package managers (apt, yum/dnf, pacman)
-- [ ] File permissions: rwxr-xr-x notation; chmod 755; chown
-- [ ] 🆕 **Common Linux configuration files**:
+- [x] File management: ls, pwd, mv, cp, rm, chmod, chown, grep, find
+- [x] sudo; package managers (apt, yum/dnf, pacman)
+- [x] File permissions: rwxr-xr-x notation; chmod 755; chown
+- [x] 🆕 **Common Linux configuration files**:
     - `/etc/passwd` — user account info (username, UID, GID, home dir, shell); NOT passwords (that's shadow)
     - `/etc/shadow` — hashed passwords; only root can read
     - `/etc/hosts` — local DNS override; maps hostnames to IPs; checked before DNS
     - `/etc/fstab` — filesystem mount table; defines what mounts at boot
     - `/etc/resolv.conf` — DNS server configuration
-- [ ] 🆕 **Linux OS components**:
+- [x] 🆕 **Linux OS components**:
     - **Kernel** — core OS; manages hardware, processes, memory; `uname -r` shows kernel version
     - **systemd** — init system and service manager; replaced SysVinit; `systemctl start/stop/enable/disable`
     - **Bootloader** — GRUB2 most common; loads kernel; edit `/etc/default/grub`
-- [ ] 🆕 **Additional Linux commands**:
+- [x] 🆕 **Additional Linux commands**:
     - `ps aux` — list all running processes
     - `top` / `htop` — real-time process monitor
     - `kill -9 PID` — force-kill process by PID
@@ -582,20 +582,20 @@
 
 ### Objective 1.7 — macOS Features (Expanded)
 
-- [ ] APFS, Finder, Activity Monitor, Disk Utility, FileVault, Time Machine, DMG files, Terminal (zsh)
-- [ ] 🆕 **macOS Spotlight** — `Cmd+Space`; universal search; find files, apps, calculations, web; faster than File Explorer search
-- [ ] 🆕 **macOS Mission Control** — `F3` or swipe up with 3 fingers; shows all open windows and Spaces (virtual desktops)
-- [ ] 🆕 **Force Quit (Cmd+Option+Esc)** — equivalent of Task Manager for ending hung apps
-- [ ] 🆕 **macOS keychain** — stores passwords, certificates, secure notes; auto-fills passwords; can unlock with Touch ID; equivalent to Windows Credential Manager
-- [ ] 🆕 **Xcode Command Line Tools** — provides `git`, `make`, `clang`; needed for developer tools on Mac
-- [ ] 🆕 **macOS System Preferences / System Settings** — control panel equivalent; General, Security & Privacy, Network, Users & Groups, Sharing
-- [ ] 🆕 **macOS Remote Desktop / Screen Sharing** — VNC-based; enable in System Settings > Sharing; or use Apple Remote Desktop (enterprise tool)
-- [ ] 🆕 **AirDrop** — wireless file transfer between Apple devices; uses Wi-Fi + Bluetooth; no internet required
-- [ ] 🆕 **Homebrew** — third-party package manager for macOS; `brew install` for CLI tools; equivalent to `apt` on Ubuntu
+- [x] APFS, Finder, Activity Monitor, Disk Utility, FileVault, Time Machine, DMG files, Terminal (zsh)
+- [x] 🆕 **macOS Spotlight** — `Cmd+Space`; universal search; find files, apps, calculations, web; faster than File Explorer search
+- [x] 🆕 **macOS Mission Control** — `F3` or swipe up with 3 fingers; shows all open windows and Spaces (virtual desktops)
+- [x] 🆕 **Force Quit (Cmd+Option+Esc)** — equivalent of Task Manager for ending hung apps
+- [x] 🆕 **macOS keychain** — stores passwords, certificates, secure notes; auto-fills passwords; can unlock with Touch ID; equivalent to Windows Credential Manager
+- [x] 🆕 **Xcode Command Line Tools** — provides `git`, `make`, `clang`; needed for developer tools on Mac
+- [x] 🆕 **macOS System Preferences / System Settings** — control panel equivalent; General, Security & Privacy, Network, Users & Groups, Sharing
+- [x] 🆕 **macOS Remote Desktop / Screen Sharing** — VNC-based; enable in System Settings > Sharing; or use Apple Remote Desktop (enterprise tool)
+- [x] 🆕 **AirDrop** — wireless file transfer between Apple devices; uses Wi-Fi + Bluetooth; no internet required
+- [x] 🆕 **Homebrew** — third-party package manager for macOS; `brew install` for CLI tools; equivalent to `apt` on Ubuntu
 
 ### Objective 1.8 — Application Installation & Requirements
 
-- [ ] 🆕 **System requirements for applications**:
+- [x] 🆕 **System requirements for applications**:
     - 32-bit vs 64-bit apps — 32-bit apps run on 64-bit Windows (WOW64 layer); 64-bit apps cannot run on 32-bit OS; 32-bit apps max 4 GB RAM
     - Dedicated vs integrated GPU — games/video editing require discrete GPU; check VRAM (GPU RAM) requirements
     - VRAM requirements — 4 GB minimum for 1080p gaming; 8 GB+ for 4K; 16 GB+ for AI/ML workloads
@@ -604,13 +604,13 @@
     - Storage requirements — installation size + working space; SSD strongly recommended for productivity apps
     - External hardware tokens — USB dongle license keys (iLok, HASP); enterprise software anti-piracy; if lost, license lost
     - OS compatibility — 32-bit vs 64-bit; minimum OS version; Windows 10 vs 11 differences
-- [ ] 🆕 **Distribution methods**:
+- [x] 🆕 **Distribution methods**:
     - Physical media (optical disc, USB) — legacy; decreasing
     - Downloadable / internet-based — most common; EXE/MSI/DMG/PKG
     - ISO image — disk image; mount with Windows or burn to USB
     - App stores — Microsoft Store, Mac App Store, Google Play; managed, sandboxed
     - Enterprise deployment — SCCM / Intune / GPO; push to endpoints silently
-- [ ] 🆕 **Cloud-based productivity tools** — Microsoft 365, Google Workspace; install companion apps; configure account sync; Teams, OneDrive, Drive desktop clients
+- [x] 🆕 **Cloud-based productivity tools** — Microsoft 365, Google Workspace; install companion apps; configure account sync; Teams, OneDrive, Drive desktop clients
 
 ---
 
@@ -618,9 +618,9 @@
 
 ### Objective 2.1 — Security Measures & Their Purposes
 
-- [ ] CIA Triad (Confidentiality / Integrity / Availability)
-- [ ] Least Privilege; Zero Trust; Defense in Depth; MFA; Separation of duties
-- [ ] 🆕 **Physical security measures**:
+- [x] CIA Triad (Confidentiality / Integrity / Availability)
+- [x] Least Privilege; Zero Trust; Defense in Depth; MFA; Separation of duties
+- [x] 🆕 **Physical security measures**:
     - Cable locks — Kensington lock; secure laptops in public spaces
     - Server rack locks — secure access to server hardware
     - Badge readers — access control to data centers/server rooms; log entry/exit
@@ -628,54 +628,54 @@
     - Visitor logs — sign in/out; escort policy for non-staff
     - Camera systems — CCTV for surveillance; motion-triggered
     - Faraday cage — blocks all wireless signals; used in sensitive compartmented info facilities (SCIF)
-- [ ] 🆕 **Logical security measures**:
+- [x] 🆕 **Logical security measures**:
     - Principle of least privilege — minimum access to do the job; review and revoke excess access
     - Access control lists (ACL) — define who can access what on network devices and filesystems
     - IAM (Identity and Access Management) — centralized control of identities and their access
     - SSO (Single Sign-On) — one login grants access to multiple apps; SAML 2.0, OAuth, OpenID Connect
     - Password managers — LastPass, Bitwarden, 1Password; store complex unique passwords
-- [ ] 🆕 **Encryption concepts**:
+- [x] 🆕 **Encryption concepts**:
     - Symmetric encryption — same key encrypts and decrypts; fast; AES-256 standard; key sharing is the problem
     - Asymmetric encryption — public key encrypts, private key decrypts; RSA, ECC; used in TLS, SSH, PGP
     - End-to-end encryption (E2EE) — only sender and recipient can decrypt; Signal, WhatsApp
     - Encryption in transit — TLS/HTTPS; protects data moving over network
     - Encryption at rest — BitLocker, FileVault, EFS; protects stored data if drive is stolen
-- [ ] 🆕 **Active Directory security** — already covered in your notes above
+- [x] 🆕 **Active Directory security** — already covered in your notes above
 
 ### Objective 2.2 — Windows OS Security Settings
 
-- [ ] UAC; Windows Defender; Windows Firewall; BitLocker; EFS; AppLocker; Credential Manager
-- [ ] Password policy settings; account lockout policy
-- [ ] 🆕 **Users and Groups security**:
+- [x] UAC; Windows Defender; Windows Firewall; BitLocker; EFS; AppLocker; Credential Manager
+- [x] Password policy settings; account lockout policy
+- [x] 🆕 **Users and Groups security**:
     - Standard user vs. Administrator — standard user cannot install software or change system settings without UAC prompt
     - Local vs. domain accounts — local = only on that PC; domain = authenticated by AD DC
     - Guest account — disabled by default; NEVER enable
     - Built-in Administrator account — rename and disable; create separate named admin account
-- [ ] 🆕 **NTFS permissions** — read, read & execute, list folder contents, write, modify, full control; inherited vs explicit; deny overrides allow
-- [ ] 🆕 **Shared folder permissions** — full control, change, read; combined with NTFS (most restrictive wins)
-- [ ] 🆕 **Windows Defender Firewall with Advanced Security** — inbound/outbound rules; create rules by program, port, or protocol; domain/private/public profiles
-- [ ] 🆕 **Run as administrator** — right-click > Run as administrator; launches with elevated privileges; triggers UAC
+- [x] 🆕 **NTFS permissions** — read, read & execute, list folder contents, write, modify, full control; inherited vs explicit; deny overrides allow
+- [x] 🆕 **Shared folder permissions** — full control, change, read; combined with NTFS (most restrictive wins)
+- [x] 🆕 **Windows Defender Firewall with Advanced Security** — inbound/outbound rules; create rules by program, port, or protocol; domain/private/public profiles
+- [x] 🆕 **Run as administrator** — right-click > Run as administrator; launches with elevated privileges; triggers UAC
 
 ### Objective 2.3 — Wireless Security Protocols & Authentication
 
-- [ ] WEP (broken) / WPA (TKIP) / WPA2 (AES/CCMP) / WPA3 (SAE)
-- [ ] WPA2 Personal (PSK) vs WPA2 Enterprise (802.1X/RADIUS)
-- [ ] Evil twin attack; disable WPS
-- [ ] 🆕 **WPA3 — SAE (Simultaneous Authentication of Equals)** — replaces PSK; resistant to offline dictionary attacks; forward secrecy (past traffic cannot be decrypted if key later compromised)
-- [ ] 🆕 **RADIUS for wireless** — clients authenticate with individual credentials; RADIUS server validates against AD; each user has unique session keys
-- [ ] 🆕 **WPS vulnerabilities** — 8-digit PIN brute-forceable in hours (Pixie Dust attack); always disable WPS
-- [ ] 🆕 **TKIP vs AES/CCMP** — TKIP (used in WPA) is deprecated/broken; AES-CCMP (used in WPA2/3) is current standard
-- [ ] 🆕 **Open network / captive portal** — no encryption; used in hotels/coffee shops; anything transmitted is readable; always use VPN on open networks
-- [ ] 🆕 **Certificate-based authentication (EAP-TLS)** — strongest wireless auth; each device has a certificate; requires PKI; immune to credential theft
+- [x] WEP (broken) / WPA (TKIP) / WPA2 (AES/CCMP) / WPA3 (SAE)
+- [x] WPA2 Personal (PSK) vs WPA2 Enterprise (802.1X/RADIUS)
+- [x] Evil twin attack; disable WPS
+- [x] 🆕 **WPA3 — SAE (Simultaneous Authentication of Equals)** — replaces PSK; resistant to offline dictionary attacks; forward secrecy (past traffic cannot be decrypted if key later compromised)
+- [x] 🆕 **RADIUS for wireless** — clients authenticate with individual credentials; RADIUS server validates against AD; each user has unique session keys
+- [x] 🆕 **WPS vulnerabilities** — 8-digit PIN brute-forceable in hours (Pixie Dust attack); always disable WPS
+- [x] 🆕 **TKIP vs AES/CCMP** — TKIP (used in WPA) is deprecated/broken; AES-CCMP (used in WPA2/3) is current standard
+- [x] 🆕 **Open network / captive portal** — no encryption; used in hotels/coffee shops; anything transmitted is readable; always use VPN on open networks
+- [x] 🆕 **Certificate-based authentication (EAP-TLS)** — strongest wireless auth; each device has a certificate; requires PKI; immune to credential theft
 
 ### Objective 2.4 — Malware Types & Detection/Removal
 
-- [ ] Virus / Worm / Trojan / Ransomware / Spyware / Adware / Rootkit / Bootkit / Fileless malware / Cryptominer / Botnet
-- [ ] Malware removal 7-step procedure
-- [ ] 🆕 **PUP (Potentially Unwanted Program)** — not technically malware but unwanted; browser toolbars, bundled freeware; detected by Windows Defender; remove via Programs and Features
-- [ ] 🆕 **Keylogger** — type of spyware; records every keystroke; captures passwords and sensitive data; can be hardware (USB dongle between keyboard and PC) or software
-- [ ] 🆕 **Man-in-the-browser (MitB)** — malware modifies browser transactions in real-time; targets online banking; bypasses HTTPS; defeated by out-of-band authentication
-- [ ] 🆕 **Malware tools/methods for detection and removal**:
+- [x] Virus / Worm / Trojan / Ransomware / Spyware / Adware / Rootkit / Bootkit / Fileless malware / Cryptominer / Botnet
+- [x] Malware removal 7-step procedure
+- [x] 🆕 **PUP (Potentially Unwanted Program)** — not technically malware but unwanted; browser toolbars, bundled freeware; detected by Windows Defender; remove via Programs and Features
+- [x] 🆕 **Keylogger** — type of spyware; records every keystroke; captures passwords and sensitive data; can be hardware (USB dongle between keyboard and PC) or software
+- [x] 🆕 **Man-in-the-browser (MitB)** — malware modifies browser transactions in real-time; targets online banking; bypasses HTTPS; defeated by out-of-band authentication
+- [x] 🆕 **Malware tools/methods for detection and removal**:
     - Windows Defender (built-in, real-time)
     - Malwarebytes (second-opinion scanner; free for manual scan)
     - ESET, Sophos, Trend Micro (enterprise AV)
@@ -683,30 +683,30 @@
     - Process Explorer / Autoruns (Sysinternals) — identify malicious processes and startup entries
     - Offline scanning — boot from AV rescue disk; scan without OS running (bypasses rootkits)
     - Safe Mode scan — disables most malware auto-start
-- [ ] 🆕 **Quarantine** — isolate infected file without deleting; preserves for analysis; AV quarantine folder
+- [x] 🆕 **Quarantine** — isolate infected file without deleting; preserves for analysis; AV quarantine folder
 
 ### Objective 2.5 — Social Engineering Attacks, Threats & Vulnerabilities
 
-- [ ] Phishing / Spear phishing / Whaling / Vishing / Smishing / Tailgating / Shoulder surfing / Dumpster diving / Pretexting / Impersonation
-- [ ] 🆕 **BEC (Business Email Compromise)** — attacker impersonates executive (CEO, CFO) via email; tricks finance into wire transfer; most costly cybercrime by dollar amount
-- [ ] 🆕 **Watering hole attack** — attacker compromises a website the target frequently visits; victim's browser is exploited when visiting
-- [ ] 🆕 **Credential harvesting** — fake login pages capture username/password; check URL carefully; use password managers (won't autofill on wrong domain)
-- [ ] 🆕 **Insider threat** — malicious or negligent employee; has legitimate access; hardest to detect; mitigated by least privilege, DLP, behavior analytics
-- [ ] 🆕 **Zero-day vulnerability** — exploit for which no patch exists yet; vendor has zero days to fix; extremely dangerous; mitigated by defense-in-depth
-- [ ] 🆕 **Unpatched software vulnerabilities** — most breaches exploit known, patchable vulnerabilities; patch management is critical
-- [ ] 🆕 **Weak password / default credentials** — default admin/admin or admin/password; must change all defaults immediately on every device
+- [x] Phishing / Spear phishing / Whaling / Vishing / Smishing / Tailgating / Shoulder surfing / Dumpster diving / Pretexting / Impersonation
+- [x] 🆕 **BEC (Business Email Compromise)** — attacker impersonates executive (CEO, CFO) via email; tricks finance into wire transfer; most costly cybercrime by dollar amount
+- [x] 🆕 **Watering hole attack** — attacker compromises a website the target frequently visits; victim's browser is exploited when visiting
+- [x] 🆕 **Credential harvesting** — fake login pages capture username/password; check URL carefully; use password managers (won't autofill on wrong domain)
+- [x] 🆕 **Insider threat** — malicious or negligent employee; has legitimate access; hardest to detect; mitigated by least privilege, DLP, behavior analytics
+- [x] 🆕 **Zero-day vulnerability** — exploit for which no patch exists yet; vendor has zero days to fix; extremely dangerous; mitigated by defense-in-depth
+- [x] 🆕 **Unpatched software vulnerabilities** — most breaches exploit known, patchable vulnerabilities; patch management is critical
+- [x] 🆕 **Weak password / default credentials** — default admin/admin or admin/password; must change all defaults immediately on every device
 
 ### Objective 2.6 — SOHO Malware Prevention & Security
 
-- [ ] First steps for new router; WPA3/WPA2; disable WPS; disable UPnP; guest VLAN
-- [ ] 🆕 **SOHO malware prevention**:
+- [x] First steps for new router; WPA3/WPA2; disable WPS; disable UPnP; guest VLAN
+- [x] 🆕 **SOHO malware prevention**:
     - Keep all firmware/software updated (routers, devices, OS)
     - Enable Windows Defender real-time protection
     - Email filtering — use spam filtering (Google/Microsoft built-in or third-party)
     - DNS filtering — use OpenDNS or NextDNS to block malicious domains
     - Browser extensions — uBlock Origin (ad/malware blocker)
     - Train users — don't click links; verify before downloading; report suspicious emails
-- [ ] 🆕 **Home router security hardening**:
+- [x] 🆕 **Home router security hardening**:
     - Change default admin credentials (web UI login, NOT Wi-Fi password)
     - Update firmware regularly
     - Use WPA3 or WPA2-AES (never TKIP or WEP)
@@ -718,7 +718,7 @@
 
 ### Objective 2.7 — Browser Security Settings
 
-- [ ] 🆕 **Browser security configuration**:
+- [x] 🆕 **Browser security configuration**:
     - Trusted vs untrusted sites — add to IE/Edge trusted zones for SSO intranet sites
     - Certificate errors — expired/self-signed cert; DO NOT proceed on corporate systems without investigation
     - Pop-up blockers — enable; disable only for known-good sites
@@ -736,16 +736,16 @@
 
 ### Objective 3.1 — Troubleshoot Windows OS Issues
 
-- [ ] System won't boot → Safe Mode → WinRE → Startup Repair
-- [ ] BSOD — stop codes; Event Viewer
-- [ ] SFC → DISM → SFC again workflow
-- [ ] Profile corruption
-- [ ] DLL missing error
-- [ ] 🆕 **Safe Mode types**:
+- [x] System won't boot → Safe Mode → WinRE → Startup Repair
+- [x] BSOD — stop codes; Event Viewer
+- [x] SFC → DISM → SFC again workflow
+- [x] Profile corruption
+- [x] DLL missing error
+- [x] 🆕 **Safe Mode types**:
     - Safe Mode — minimal drivers; no network
     - Safe Mode with Networking — adds network drivers; can download tools
     - Safe Mode with Command Prompt — no Explorer GUI; command line only; for heavy repairs
-- [ ] 🆕 **Common Windows OS issues**:
+- [x] 🆕 **Common Windows OS issues**:
     - Slow boot — check startup programs (Task Manager > Startup); disable unnecessary; check Event Viewer for boot delays
     - Slow performance — check RAM (is it maxed?), CPU (thermal throttling?), disk (SSD vs HDD, SMART status)
     - Application crashes — Event Viewer > Windows Logs > Application; look for crash reports and DLL faults
@@ -755,24 +755,24 @@
 
 ### Objective 3.2 — Troubleshoot Mobile OS & App Issues
 
-- [ ] Battery drain; overheating; no SIM detected; app crashes; slow performance
-- [ ] 🆕 **Mobile OS update failures** — insufficient storage; poor Wi-Fi; try update via USB to computer (iTunes/Finder for iOS; ADB for Android)
-- [ ] 🆕 **App not updating** — clear Play Store / App Store cache; check payment method on account; check storage
-- [ ] 🆕 **Mobile device sync issues** — check account credentials; check MDM enrollment status; re-enroll if needed
-- [ ] 🆕 **High data usage** — identify culprit app in Settings > Data Usage; background data restriction; set data warnings/limits
+- [x] Battery drain; overheating; no SIM detected; app crashes; slow performance
+- [x] 🆕 **Mobile OS update failures** — insufficient storage; poor Wi-Fi; try update via USB to computer (iTunes/Finder for iOS; ADB for Android)
+- [x] 🆕 **App not updating** — clear Play Store / App Store cache; check payment method on account; check storage
+- [x] 🆕 **Mobile device sync issues** — check account credentials; check MDM enrollment status; re-enroll if needed
+- [x] 🆕 **High data usage** — identify culprit app in Settings > Data Usage; background data restriction; set data warnings/limits
 
 ### Objective 3.3 — Troubleshoot Mobile OS Security Issues
 
-- [ ] 🆕 **Mobile device locked out** — Android: Google account recovery, Factory Reset Protection; iOS: iCloud recovery, Apple ID reset
-- [ ] 🆕 **Unauthorized account access** — enable 2FA on all mobile accounts; check sign-in logs; change all passwords; revoke sessions
-- [ ] 🆕 **Leaked corporate data from mobile** — remote selective wipe via MDM; review MAM policies; enable conditional access
-- [ ] 🆕 **Profile issues** — MDM configuration profile not installing; check enrollment status; re-enroll device; ensure correct Apple/Android enterprise account
+- [x] 🆕 **Mobile device locked out** — Android: Google account recovery, Factory Reset Protection; iOS: iCloud recovery, Apple ID reset
+- [x] 🆕 **Unauthorized account access** — enable 2FA on all mobile accounts; check sign-in logs; change all passwords; revoke sessions
+- [x] 🆕 **Leaked corporate data from mobile** — remote selective wipe via MDM; review MAM policies; enable conditional access
+- [x] 🆕 **Profile issues** — MDM configuration profile not installing; check enrollment status; re-enroll device; ensure correct Apple/Android enterprise account
 
 ### Objective 3.4 — Troubleshoot PC Security Issues
 
-- [ ] Malware removal 7-step procedure
-- [ ] Ransomware — offline backups; patching; email filtering
-- [ ] 🆕 **Common PC security symptoms**:
+- [x] Malware removal 7-step procedure
+- [x] Ransomware — offline backups; patching; email filtering
+- [x] 🆕 **Common PC security symptoms**:
     - Pop-ups / browser redirects — adware or browser hijacker; check extensions; reset browser settings
     - Renamed/encrypted files — ransomware; disconnect from network immediately; restore from backup
     - Certificate warnings — malware intercepting TLS; check proxy settings; run AV scan
