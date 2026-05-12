@@ -788,16 +788,16 @@
 
 ### Objective 4.1 — Documentation & Support Systems
 
-- [ ] Change management; CAB; rollback plan; asset inventory; network diagrams; knowledge base; SOP; incident documentation
-- [ ] 🆕 **CMDB (Configuration Management Database)** — tracks all IT assets and their relationships; know what's connected to what; used for change impact analysis; ServiceNow is the most popular CMDB
-- [ ] 🆕 **Ticketing system** — IT service management (ITSM); ServiceNow, Jira Service Management, Zendesk, Freshdesk; record all incidents, requests, changes; assigned severity/priority
-- [ ] 🆕 **Regulatory and business compliance requirements** — HIPAA (healthcare), PCI-DSS (credit card), GDPR (EU data), RA-ITRIP (PH Data Privacy Act 2012); compliance affects how data is stored, accessed, and destroyed
-- [ ] 🆕 **Splash screens** — used by organizations to display legal notices/acceptable use policy before login; required for compliance in many regulated industries
+- [x] Change management; CAB; rollback plan; asset inventory; network diagrams; knowledge base; SOP; incident documentation
+- [x] 🆕 **CMDB (Configuration Management Database)** — tracks all IT assets and their relationships; know what's connected to what; used for change impact analysis; ServiceNow is the most popular CMDB
+- [x] 🆕 **Ticketing system** — IT service management (ITSM); ServiceNow, Jira Service Management, Zendesk, Freshdesk; record all incidents, requests, changes; assigned severity/priority
+- [x] 🆕 **Regulatory and business compliance requirements** — HIPAA (healthcare), PCI-DSS (credit card), GDPR (EU data), RA-ITRIP (PH Data Privacy Act 2012); compliance affects how data is stored, accessed, and destroyed
+- [x] 🆕 **Splash screens** — used by organizations to display legal notices/acceptable use policy before login; required for compliance in many regulated industries
 
 ### Objective 4.2 — Change Management Procedures
 
-- [ ] Change management flow; CAB; rollback plan
-- [ ] 🆕 **Change management key concepts**:
+- [x] Change management flow; CAB; rollback plan
+- [x] 🆕 **Change management key concepts**:
     - RFC (Request for Change) — formal document submitted for review
     - Standard change — pre-approved, low-risk, routine (e.g., password reset)
     - Normal change — must go through CAB review
@@ -807,23 +807,23 @@
 
 ### Objective 4.3 — Backup & Recovery Methods
 
-- [ ] 3-2-1 rule; Full / Incremental / Differential; RPO / RTO; testing backups; Windows Backup options
-- [ ] 🆕 **GFS (Grandfather-Father-Son) backup rotation** — daily (son), weekly (father), monthly (grandfather); tape rotation strategy; minimizes media wear
-- [ ] 🆕 **Onsite vs offsite backup** — onsite: fast restore; offsite: disaster recovery; cloud backup = offsite by definition
-- [ ] 🆕 **Synthetic full backup** — server-side full backup created from previous full + incrementals; no need to re-send all data from client; storage-efficient
-- [ ] 🆕 **Backup verification** — after backup, verify checksum/hash; test restore periodically; backup without restore test = not trustworthy
-- [ ] 🆕 **Windows File History** — backs up user libraries continuously to external drive or network; easy self-service restore; NOT a full system backup
+- [x] 3-2-1 rule; Full / Incremental / Differential; RPO / RTO; testing backups; Windows Backup options
+- [x] 🆕 **GFS (Grandfather-Father-Son) backup rotation** — daily (son), weekly (father), monthly (grandfather); tape rotation strategy; minimizes media wear
+- [x] 🆕 **Onsite vs offsite backup** — onsite: fast restore; offsite: disaster recovery; cloud backup = offsite by definition
+- [x] 🆕 **Synthetic full backup** — server-side full backup created from previous full + incrementals; no need to re-send all data from client; storage-efficient
+- [x] 🆕 **Backup verification** — after backup, verify checksum/hash; test restore periodically; backup without restore test = not trustworthy
+- [x] 🆕 **Windows File History** — backs up user libraries continuously to external drive or network; easy self-service restore; NOT a full system backup
 
 ### Objective 4.4 — Safety Procedures
 
-- [ ] ESD; anti-static wrist strap; anti-static mat; anti-static bags; SDS; toner vacuum; battery disposal; CRT disposal; Class C fire; lifting technique
-- [ ] 🆕 **Proper component handling**:
+- [x] ESD; anti-static wrist strap; anti-static mat; anti-static bags; SDS; toner vacuum; battery disposal; CRT disposal; Class C fire; lifting technique
+- [x] 🆕 **Proper component handling**:
     - Hold PCBs by edges; never touch traces or chips
     - Store components on anti-static mat or in anti-static bag
     - Ground yourself before opening case; touch metal chassis
-- [ ] 🆕 **Toner handling** — toner particles are carcinogenic if inhaled; use NIOSH-rated mask for toner spills; use toner vacuum or damp cloth only
-- [ ] 🆕 **MSDS / SDS** — Safety Data Sheet; required for all chemicals; lists hazards, first aid, disposal; OSHA requires on-site
-- [ ] 🆕 **Equipment disposal / recycling**:
+- [x] 🆕 **Toner handling** — toner particles are carcinogenic if inhaled; use NIOSH-rated mask for toner spills; use toner vacuum or damp cloth only
+- [x] 🆕 **MSDS / SDS** — Safety Data Sheet; required for all chemicals; lists hazards, first aid, disposal; OSHA requires on-site
+- [x] 🆕 **Equipment disposal / recycling**:
     - CRT monitors — lead and high-voltage capacitors; hazardous waste facility
     - Toner cartridges — many manufacturers have return/recycle programs
     - Mobile devices — battery recycling programs; Call2Recycle
@@ -832,17 +832,17 @@
 
 ### Objective 4.5 — Environmental Impacts & Controls
 
-- [ ] 🆕 **Temperature and humidity controls** — data centers: 64-80°F (18-27°C), 45-55% relative humidity; humidity too low = ESD; too high = condensation
-- [ ] 🆕 **Proper ventilation** — hot aisle / cold aisle containment in data centers; airflow from front to back of rack; blanking panels in unused rack slots
-- [ ] 🆕 **Power protection**:
+- [x] 🆕 **Temperature and humidity controls** — data centers: 64-80°F (18-27°C), 45-55% relative humidity; humidity too low = ESD; too high = condensation
+- [x] 🆕 **Proper ventilation** — hot aisle / cold aisle containment in data centers; airflow from front to back of rack; blanking panels in unused rack slots
+- [x] 🆕 **Power protection**:
     - Surge suppressor — protects from voltage spikes; use on all equipment
     - UPS — battery backup; VA rating must exceed connected load; runtime varies by battery capacity
     - Line conditioner — smooths voltage fluctuations; often built into line-interactive UPS
-- [ ] 🆕 **Green IT** — ENERGY STAR ratings; power-saving modes; virtualization reduces physical hardware; responsible e-waste disposal
-
+- [x] 🆕 **Green IT** — ENERGY STAR ratings; power-saving modes; virtualization reduces physical hardware; responsible e-waste disposal
+	
 ### Objective 4.6 — Incident Response & Forensics
 
-- [ ] 🆕 **Incident response basics**:
+- [x] 🆕 **Incident response basics**:
     - **Chain of custody** — documented record of who handled evidence and when; required for legal admissibility
     - **Informing management / law enforcement** — when required; data breach notification laws; HIPAA breach = notify within 60 days; PCI DSS breach = notify immediately
     - **Copy of drive (data integrity)** — create forensic image (bit-for-bit copy) before analysis; use `dd` (Linux) or FTK Imager; never analyze original
@@ -861,45 +861,45 @@
 
 ### Objective 4.7 — Licensing, Regulatory Compliance & Data
 
-- [ ] Data destruction & disposal: Overwriting, Zero-fill, Degaussing, Physical destruction, NIST 800-88
-- [ ] 🆕 **Licensing types**:
+- [x] Data destruction & disposal: Overwriting, Zero-fill, Degaussing, Physical destruction, NIST 800-88, Crypto-Erase
+- [x] 🆕 **Licensing types**:
     - Valid license — must have for all software; audit-ready
     - Perpetual license — one-time purchase; use forever; no subscription; e.g., Office 2021
     - Subscription license — pay monthly/annually; stops working if subscription lapses; e.g., Microsoft 365
     - Personal-use license — for one person on limited devices
     - Corporate/enterprise license — volume licensing; per seat or per device; must track installs
     - Open-source license — free to use/modify; GPL requires derivative works to also be open-source; MIT/Apache = more permissive
-- [ ] 🆕 **DRM (Digital Rights Management)** — prevents unauthorized copying; built into e-books, streaming services, some software
-- [ ] 🆕 **EULA (End-User License Agreement)** — legal contract for software use; agreeing to install = agreeing to EULA
-- [ ] 🆕 **NDA / MNDA** — Non-Disclosure Agreement; protects company confidential info; employees sign on hire; third parties sign before receiving sensitive data
-- [ ] 🆕 **Regulated data types**:
+- [x] 🆕 **DRM (Digital Rights Management)** — prevents unauthorized copying; built into e-books, streaming services, some software
+- [x] 🆕 **EULA (End-User License Agreement)** — legal contract for software use; agreeing to install = agreeing to EULA
+- [x] 🆕 **NDA / MNDA** — Non-Disclosure Agreement; protects company confidential info; employees sign on hire; third parties sign before receiving sensitive data
+- [x] 🆕 **Regulated data types**:
     - PII (Personally Identifiable Information) — name, SSN, address, birthdate; Protected by GDPR, Privacy Act
     - PHI (Protected Health Information) — medical records; governed by HIPAA
     - PCI data — credit card numbers; governed by PCI-DSS
     - Government-issued IDs — passports, driver's licenses; handle with strict controls
     - Data retention requirements — how long must you keep certain data? Varies by regulation and country
-- [ ] 🆕 **AUP (Acceptable Use Policy)** — defines allowed and prohibited use of company IT resources; must be signed by all employees; splash screen at login as reminder
+- [x] 🆕 **AUP (Acceptable Use Policy)** — defines allowed and prohibited use of company IT resources; must be signed by all employees; splash screen at login as reminder
 
 ### Objective 4.8 — Communication Techniques & Professionalism
 
-- [ ] 🆕 **Professional appearance and conduct**:
+- [x] 🆕 **Professional appearance and conduct**:
     - Present appropriate attire for environment (formal vs business casual)
     - Be punctual; if late, notify customer
     - Avoid personal interruptions (calls, texting, social media) during customer interaction
     - Use proper language; avoid jargon and acronyms with non-technical users
     - Maintain positive attitude; do not argue with customer or become defensive
-- [ ] 🆕 **Effective communication**:
-    - Active listening — don't interrupt; confirm understanding by repeating back ("So what I'm hearing is...")
+- [x] 🆕 **Effective communication**:
+	    - Active listening — don't interrupt; confirm understanding by repeating back ("So what I'm hearing is...")
     - Open-ended questions — "Can you describe what happens when...?" (gets more info than yes/no)
     - Clarifying questions — "When did this start?" "What changed recently?"
     - Avoid assumptions — don't assume user caused the problem; never blame the user
     - Set expectations — tell user what you're doing and how long it will take; provide updates
     - Follow up — contact user after repair to confirm satisfaction
-- [ ] 🆕 **Difficult customers**:
+- [x] 🆕 **Difficult customers**:
     - Stay calm; do not escalate emotion; use empathy ("I understand how frustrating this must be")
     - Document everything said during interaction
     - Know when to escalate — to supervisor if situation cannot be resolved professionally
-- [ ] 🆕 **Confidentiality**:
+- [x] 🆕 **Confidentiality**:
     - Do not share customer/company information with unauthorized parties
     - Do not discuss other users' data or IT incidents
     - Discretion when working at customer's workstation (may see sensitive data)
@@ -907,22 +907,22 @@
 
 ### Objective 4.9 — Scripting Basics
 
-- [ ] PowerShell: Get-Process, Stop-Process, Get-Service, Get-EventLog, Set-ExecutionPolicy, Test-NetConnection
-- [ ] 🆕 **Script file types**:
+- [x] PowerShell: Get-Process, Stop-Process, Get-Service, Get-EventLog, Set-ExecutionPolicy, Test-NetConnection
+- [x] 🆕 **Script file types**:
     - `.bat` — Windows batch file; legacy; CMD shell commands; `@echo off` suppresses output; basic automation
     - `.ps1` — PowerShell script; more powerful than batch; can interact with WMI, AD, registry, APIs
     - `.vbs` — VBScript; legacy Windows automation; still found in old enterprise environments
     - `.sh` — Bash/shell script; Linux/macOS; start with shebang (`#!/bin/bash`); `chmod +x` to make executable
     - `.js` — JavaScript; can be run as Windows Script Host (wscript/cscript) or Node.js
     - `.py` — Python; cross-platform; powerful for automation, data processing, network scripting
-- [ ] 🆕 **Scripting concepts**:
+- [x] 🆕 **Scripting concepts**:
     - Variables — `$name = "John"` (PS), `name="John"` (bash)
     - Loops — `for`, `while`, `foreach`
     - Conditionals — `if/else`, `switch`
     - Comments — `#` (PS/bash/Python), `REM` (batch)
     - Input/output — `Read-Host` (PS), `read` (bash), `input()` (Python)
     - Error handling — `try/catch` (PS/Python); `set -e` (bash)
-- [ ] 🆕 **Common admin scripts to know**:
+- [x] 🆕 **Common admin scripts to know**:
     - List all users in AD group (PowerShell)
     - Map network drives at logon (batch/PS)
     - Bulk reset user passwords (PS + AD module)
@@ -931,30 +931,30 @@
 
 ### Objective 4.10 — Remote Access Technologies
 
-- [ ] RDP (port 3389); TeamViewer; AnyDesk; Quick Assist; Chrome Remote Desktop; Zoom/Teams screen sharing
-- [ ] Cisco AnyConnect; Palo Alto GlobalProtect; VPN protocols; split tunneling; full tunnel
-- [ ] VPN troubleshooting workflow
-- [ ] 🆕 **Remote access security considerations**:
+- [x] RDP (port 3389); TeamViewer; AnyDesk; Quick Assist; Chrome Remote Desktop; Zoom/Teams screen sharing
+- [x] Cisco AnyConnect; Palo Alto GlobalProtect; VPN protocols; split tunneling; full tunnel
+- [x] VPN troubleshooting workflow
+- [x] 🆕 **Remote access security considerations**:
     - Never expose RDP directly to internet; use VPN + RDP or RD Gateway
     - Enable Network Level Authentication (NLA) for RDP — requires authentication before full connection
     - Use non-default port for RDP (security through obscurity — not a replacement for proper security)
     - TeamViewer/AnyDesk — review authorized access list; revoke unattended access for terminated employees
     - Least privilege for remote accounts — dedicated service accounts for RMM tools
-- [ ] 🆕 **SPICE (Simple Protocol for Independent Computing Environments)** — remote display protocol for VMs; used in KVM/QEMU virtual machines; better video performance than VNC
-- [ ] 🆕 **VNC (Virtual Network Computing)** — cross-platform remote desktop; port 5900; no authentication by default; use with SSH tunnel or password
-- [ ] 🆕 **WinRM (Windows Remote Management)** — Microsoft's implementation of WS-Management; allows PowerShell remoting; `Enable-PSRemoting`; port 5985 (HTTP) / 5986 (HTTPS)
-- [ ] 🆕 **RMM (Remote Monitoring and Management)** — tools used by MSPs; ConnectWise, NinjaRMM, Datto, Kaseya; monitors endpoints, pushes scripts, remote access
+- [x] 🆕 **SPICE (Simple Protocol for Independent Computing Environments)** — remote display protocol for VMs; used in KVM/QEMU virtual machines; better video performance than VNC
+- [x] 🆕 **VNC (Virtual Network Computing)** — cross-platform remote desktop; port 5900; no authentication by default; use with SSH tunnel or password
+- [x] 🆕 **WinRM (Windows Remote Management)** — Microsoft's implementation of WS-Management; allows PowerShell remoting; `Enable-PSRemoting`; port 5985 (HTTP) / 5986 (HTTPS)
+- [x] 🆕 **RMM (Remote Monitoring and Management)** — tools used by MSPs; ConnectWise, NinjaRMM, Datto, Kaseya; monitors endpoints, pushes scripts, remote access
 
 ### Objective 4.11 — Artificial Intelligence (AI) Basics 🆕 NEW IN V15
 
 > This is an entirely new section added to V15. It was not in the previous (1101/1102) version.
 
-- [ ] 🆕 **AI application integration** — AI features built into OS/apps: Windows Copilot, Microsoft 365 Copilot, macOS Siri; used for drafting emails, summarizing documents, troubleshooting suggestions
-- [ ] 🆕 **AI in IT support** — AI chatbots for Tier 0/1 support; automated ticket categorization; predictive failure analysis; SIEM anomaly detection
-- [ ] 🆕 **AI policy considerations**:
+- [x] 🆕 **AI application integration** — AI features built into OS/apps: Windows Copilot, Microsoft 365 Copilot, macOS Siri; used for drafting emails, summarizing documents, troubleshooting suggestions
+- [x] 🆕 **AI in IT support** — AI chatbots for Tier 0/1 support; automated ticket categorization; predictive failure analysis; SIEM anomaly detection
+- [x] 🆕 **AI policy considerations**:
     - Appropriate use — company policies on using AI tools for work; what data can be submitted to AI?
     - Plagiarism — AI-generated content must be reviewed; academic/professional integrity concerns
-- [ ] 🆕 **AI limitations**:
+- [x] 🆕 **AI limitations**:
     - Bias — AI trained on biased data produces biased outputs; important for hiring tools, security scoring
     - Hallucinations — AI confidently states incorrect information; never trust AI output without verification
     - Accuracy — AI knowledge has cutoff dates; not always current; fact-check critical information
